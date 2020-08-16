@@ -17,13 +17,13 @@ https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b
 
 ## Table of contents
 
-- [Required packages](#Required packages)
-- [The GUI](#The GUI)
-- [GUI explanation](#GUI explanation)
+- [Required packages](#Required-packages)
+- [The GUI](#The-GUI)
+- [GUI explanation](#GUI-explanation)
 - [Example](#Example)
-- [Minimalistic Jupyter notebook](#Minimalistic Jupyter notebook)
+- [Minimalistic Jupyter notebook](#Minimalistic-Jupyter-notebook)
 - [Notes](#Notes)
-- [To do](#To do:)
+- [To do](#To-do:)
 ---
 
 
