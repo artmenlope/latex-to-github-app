@@ -4,7 +4,9 @@ This is a small app for converting LaTeX code to a format readable by GitHub's M
 
 It was inspired by the solutions provided by Alexander Rodin (username: a-rodin) at:
 
-	[https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b](https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b)
+<p align="center">
+https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b
+</p>
 
 ■ You can write your LaTeX formula in the frame under the label "Write yout LaTeX code:". Pressing the "Convert LaTeX code" left button under the LaTeX input frame a HTML code is generated. This code can be pasted into a GitHub README.md file so the desired formula can be generated. 
 It is asumed that the input is already in math mode. You can also start writing in the LaTeX frame as soon as the app is opened.
