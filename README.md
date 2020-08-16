@@ -1,5 +1,10 @@
 # LaTeX-to-GitHub-app
 
+<!--See https://shields.io/ for the badges-->
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/LICENSE.md)
+![Version](https://img.shields.io/github/v/release/artmenlope/LaTeX-to-GitHub-app?include_prereleases)
+![Last Commit](https://img.shields.io/github/last-commit/artmenlope/LaTeX-to-GitHub-app)
+
 This is a small app for converting LaTeX code to a format readable by GitHub's Markdown using source URLs. It is written in Python 3.
 
 It was inspired by the solutions provided by Alexander Rodin (username: a-rodin) at:
@@ -7,6 +12,22 @@ It was inspired by the solutions provided by Alexander Rodin (username: a-rodin)
 <p align="center">
 https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b
 </p>
+
+<br>
+
+## Table of contents
+
+- [Required packages](#Required packages)
+- [The GUI](#The GUI)
+- [GUI explanation](#GUI explanation)
+- [Example](#Example)
+- [Minimalistic Jupyter notebook](#Minimalistic Jupyter notebook)
+- [Notes](#Notes)
+- [To do](#To do:)
+---
+
+
+## Required packages
 
 The required Python packages are:
 
@@ -29,6 +50,12 @@ The required Python packages are:
     </ul>
 </ul>
 -->
+
+<br>
+
+---
+
+## The GUI
 
 The GUI looks like this:
 
@@ -119,6 +146,8 @@ print("GitHub URL:\n\n", github_url, "\n\nHTML result:\n\n", html_result)
 ## Notes
 
 This small app was developed in Windows 10 using the Spyder 4 IDE. It hasn't been tested on Linux.
+
+At the current state of development you will need to install the needed packages and run the [latex-to-github-app.py](https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/latex-to-github-app.py) script if you want to use the app.
 
 ### To do:
 
