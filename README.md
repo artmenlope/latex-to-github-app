@@ -1,9 +1,9 @@
-# LaTeX-to-GitHub-app
+# latex-to-github-app
 
 <!--See https://shields.io/ for the badges-->
-[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/LICENSE.md)
-![Version](https://img.shields.io/github/v/release/artmenlope/LaTeX-to-GitHub-app?include_prereleases)
-![Last Commit](https://img.shields.io/github/last-commit/artmenlope/LaTeX-to-GitHub-app)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/artmenlope/latex-to-github-app/blob/master/LICENSE.md)
+![Version](https://img.shields.io/github/v/release/artmenlope/latex-to-github-app?include_prereleases)
+![Last Commit](https://img.shields.io/github/last-commit/artmenlope/latex-to-github-app)
 
 This is a small app for converting LaTeX code to a format readable by GitHub's Markdown using source URLs. It is written in Python 3.
 
@@ -58,7 +58,7 @@ The required Python packages are:
 The GUI looks like this:
 
 <p align="center">
-<img src="https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/images/main-window.PNG" width="80%">
+<img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/main-window.PNG" width="80%">
 </p>
 
 <br>
@@ -93,7 +93,7 @@ https://render.githubusercontent.com/render/math?math=--Formatted formula here--
 The following image is an example of use:
 
 <p align="center">
-<img src="https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/images/example1.PNG" width="80%">
+<img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/example1.PNG" width="80%">
 </p>
 
 Then, you can copy and paste the resulting HTML code, for example, in your README.md file like the following if you want to obtain a centered equation:
@@ -116,7 +116,7 @@ The result of the previous HTML code will be:
 
 ## Minimalistic Jupyter notebook
 
-In this repository there is also included a [minimalistic Jupyter notebook](https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/LaTeX%20to%20GitHub%20minimalistic%20notebook.ipynb) with the essential functionality of the code: translating from LaTeX to HTML readable by the GitHub math renderer. This notebook only requires the urllib package. The code is the following:
+In this repository there is also included a [minimalistic Jupyter notebook](https://github.com/artmenlope/latex-to-github-app/blob/master/LaTeX%20to%20GitHub%20minimalistic%20notebook.ipynb) with the essential functionality of the code: translating from LaTeX to HTML readable by the GitHub math renderer. This notebook only requires the urllib package. The code is the following:
 
 ```python
 import urllib
@@ -145,7 +145,7 @@ print("GitHub URL:\n\n", github_url, "\n\nHTML result:\n\n", html_result)
 
 This small app was developed in Windows 10 using the Spyder 4 IDE. It hasn't been tested on Linux.
 
-At the current state of development you will need to install the needed packages and run the [latex-to-github-app.py](https://github.com/artmenlope/LaTeX-to-GitHub-app/blob/master/latex-to-github-app.py) script if you want to use the app.
+At the current state of development you will need to install the needed packages and run the [latex-to-github-app.py](https://github.com/artmenlope/latex-to-github-app/blob/master/latex-to-github-app.py) script if you want to use the app.
 
 ### To do:
 
