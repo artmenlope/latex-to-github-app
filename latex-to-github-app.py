@@ -164,7 +164,7 @@ class Application:
         self.string = self.entry.get("1.0",tk.END)
         self.encoded_string = urllib.parse.quote(str(self.string).encode("utf-8"), safe="~()*!.\"")
         self.github_url = "https://render.githubusercontent.com/render/math?math=" + self.encoded_string
-        self.result = '<img src="' + self.github_url + self.encoded_string + '">'
+        self.result = '<img src="' + self.github_url + '">'
     
         self.output_html.delete('1.0', tk.END)
         self.output_html.insert(tk.END, str(self.result))
