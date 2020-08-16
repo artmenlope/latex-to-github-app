@@ -13,8 +13,6 @@ It was inspired by the solutions provided by Alexander Rodin (username: a-rodin)
 https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b
 </p>
 
-<br>
-
 ## Table of contents
 
 - [Required packages](#Required-packages)
@@ -24,8 +22,8 @@ https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b
 - [Minimalistic Jupyter notebook](#Minimalistic-Jupyter-notebook)
 - [Notes](#Notes)
 - [To do](#To-do)
----
 
+---
 
 ## Required packages
 
