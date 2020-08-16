@@ -294,7 +294,7 @@ class Application:
             'Keeping the "View image" checkbutton below the input frame checked, the formula can ve viewed on '+\
             'the "Image:" canvas on the lower right.'+"\n\n"+\
             u"\u274F"+" For further reference on this application see the following GitHub repository:"+"\n\n"+\
-            "\thttps://github.com/artmenlope/..."+"\n\n"+\
+            "\thttps://github.com/artmenlope/LaTeX-to-GitHub-app"+"\n\n"+\
             "This project is licensed under the terms of the MIT license."))
             
         
