@@ -86,11 +86,17 @@ https://render.githubusercontent.com/render/math?math=--Formatted formula here--
 
 <br>
 
+<p align="center">
+<img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/example-animation.gif" width="55%">
+</p>
+
+■ After having obtained results like in the animation above, if you want to write a different LaTeX code you can just delete the old LaTeX code and write again. Don't worry about the output, it will be overwritten.
+
 ---
 
 ## Example
 
-The following image is an example of use:
+In the following image you can see an example of input and output:
 
 <p align="center">
 <img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/example1.PNG" width="80%">
@@ -145,10 +151,14 @@ print("GitHub URL:\n\n", github_url, "\n\nHTML result:\n\n", html_result)
 
 This small app was developed in Windows 10 using the Spyder 4 IDE. It hasn't been tested on Linux.
 
+To copy and paste in the app you can use the <kbd>ctrl</kbd>+<kbd>c</kbd> and <kbd>ctrl</kbd>+<kbd>v</kbd> shortcuts.
+
 At the current state of development you will need to install the needed packages and run the [latex-to-github-app.py](https://github.com/artmenlope/latex-to-github-app/blob/master/latex-to-github-app.py) script if you want to use the app.
 
 ### To do:
 
+- [ ] Make a reset button.
+- [ ] Make a mouse right click menu for copying and pasting.
 - [ ] Test in Ubuntu.
 - [ ] Make an executable file app.
 
