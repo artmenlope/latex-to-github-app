@@ -13,6 +13,8 @@ It was inspired by the solutions provided by Alexander Rodin (username: a-rodin)
 https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b
 </p>
 
+Please, remember to read the [Notes](#Notes).
+
 ## Table of contents
 
 - [Required packages](#Required-packages)
