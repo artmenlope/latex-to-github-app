@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/artmenlope/latex-to-github-app/blob/master/LICENSE.md)
 ![Version](https://img.shields.io/github/v/release/artmenlope/latex-to-github-app?include_prereleases)
 ![Last Commit](https://img.shields.io/github/last-commit/artmenlope/latex-to-github-app)
+<!-- ![win-test](https://img.shields.io/badge/tested-windows%2010%20%7C%20ubuntu%2020.04%20LTS-lightgrey) -->
 
 This is a small app for converting LaTeX code to a format readable by GitHub's Markdown using source URLs. It is written in Python 3.
 
@@ -33,8 +34,8 @@ The required Python packages are:
 
 * tkinter
 * urllib
-* PIL
-* io
+* PIL (to import Image and ImageTk)
+* io (to import BytesIO)
 * cairosvg
 
 <!--
@@ -57,13 +58,23 @@ The required Python packages are:
 
 ## The GUI
 
+
 The GUI looks like this:
 
+<!--
 <p align="center">
 <img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/main-window.PNG" width="80%">
 </p>
+-->
+
+<img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/main-window.PNG" width="87%"> | <img src="https://github.com/artmenlope/latex-to-github-app/blob/master/images/main-window-ubuntu.png" width="100%">
+| :------: | :-------: |
+Windows 10 | Ubuntu 20.04 LTS
 
 <br>
+
+
+
 
 ---
 
@@ -151,7 +162,7 @@ print("GitHub URL:\n\n", github_url, "\n\nHTML result:\n\n", html_result)
 
 ## Notes
 
-This small app was developed in Windows 10 using the Spyder 4 IDE. It hasn't been tested on Linux.
+This small app was developed in Windows 10 using the Spyder IDE. It has also been tested on Ubuntu 20.04 LTS.
 
 To copy and paste in the app you can use the <kbd>ctrl</kbd>+<kbd>c</kbd> and <kbd>ctrl</kbd>+<kbd>v</kbd> shortcuts.
 
@@ -161,6 +172,6 @@ At the current state of development you will need to install the needed packages
 
 - [ ] Make a reset button.
 - [ ] Make a mouse right click menu for copying and pasting.
-- [ ] Test in Ubuntu.
+- [x] Test in Ubuntu.
 - [ ] Make an executable file app.
 
