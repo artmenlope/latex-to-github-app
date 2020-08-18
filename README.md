@@ -52,7 +52,6 @@ The required Python packages are:
 </ul>
 -->
 
-<br>
 
 ---
 
