@@ -150,7 +150,7 @@ a & = b
 
 encoded_string = urllib.parse.quote(str(string).encode("utf-8"), safe="~()*!.\"")
 github_url = "https://render.githubusercontent.com/render/math?math=" + encoded_string
-html_result = '<img src="' + github_url + encoded_string + '">'
+html_result = '<img src="' + github_url + '">'
 
 print("GitHub URL:\n\n", github_url, "\n\nHTML result:\n\n", html_result)
 ```
