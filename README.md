@@ -157,7 +157,6 @@ print("GitHub URL:\n\n", github_url, "\n\nHTML result:\n\n", html_result)
 
 You can try Jupyter in your browser without installing anything at [https://jupyter.org/try](https://jupyter.org/try). There, you can create a new notebook and run the code snippet above.
 
-<br> 
 
 ---
 
