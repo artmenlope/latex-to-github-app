@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Aug  2 12:14:50 2020
-
 @author: artmenlope
 """
 
@@ -11,7 +10,7 @@ import tkinter as tk               # Python 3
 import urllib                      # To convert the LaTeX code to HTML
 from PIL import Image, ImageTk
 from io import BytesIO
-import cairosvg
+from cairosvg import svg2png
 
 
 
@@ -61,6 +60,8 @@ class Application:
         self.l4 = tk.Label(self.root, text="Image:")
         self.output_img = tk.Canvas(self.root, bg="white", width=self.canvas_width, height=self.canvas_height)
 
+        self.right_click_menus() # Create right click mouse copy-cut-paste menus for the text widgets.
+        
         return
     
     
@@ -183,22 +184,27 @@ class Application:
     
     def show_image(self):
         
-        self.page = urllib.request.urlopen(self.github_url).read()
-        self.img_data = self.page
-        self.img_data = cairosvg.svg2png(bytestring=self.img_data, write_to=None)
-        self.img_data = Image.open(BytesIO(self.img_data))
-        
-        #####
-        self.check_canvas_dimensions() 
-        ###
-        
-        self.image = ImageTk.PhotoImage(self.img_data)
-        
-        self.root.image=self.image # to prevent the image garbage collected.
-        
-        self.output_img.create_image((10,10), image=self.root.image, anchor="nw")
-        self.output_img.update() # Refresh (optional)
-        
+        try:
+            self.page = urllib.request.urlopen(self.github_url).read()
+            self.img_data = self.page
+            self.img_data = svg2png(bytestring=self.img_data, write_to=None)
+            self.img_data = Image.open(BytesIO(self.img_data))
+            
+            #####
+            self.check_canvas_dimensions() 
+            #####
+            
+            self.image = ImageTk.PhotoImage(self.img_data)
+            
+            self.root.image=self.image # to prevent the image garbage collected.
+            
+            self.output_img.create_image((10,10), image=self.root.image, anchor="nw")
+            self.output_img.update() # Refresh (optional)
+            
+        except urllib.error.HTTPError: # Error while rendering the image using Github.
+            tk.messagebox.showerror(title="HTTPError", message="An error occurred while trying to show the image.\n\nPlease, check for typos in your LaTeX code.")
+            raise # Show the exception in the terminal too.
+            
         return
     
     
@@ -246,6 +252,83 @@ class Application:
         
         return
     
+    def right_click_menus(self):
+        
+        """
+        Create a right click mouse menu on each text widget with 
+        the copy, cut and paste options.
+        
+        References: 
+            https://stackoverflow.com/q/8449053
+            https://gist.github.com/kai9987kai/f8b34c5538613d2786be8ab1b273e1ca
+        """
+        
+        # Right click menu on the text entry widget.
+        
+        rClickMenu_entry = tk.Menu(self.entry, tearoff=0) # Create the menu.
+        rClickMenu_entry.add_command(label="Copy", 
+                                     accelerator="Ctrl+C", # Show the command's shortcut together with the label.
+                                     command=lambda: self.entry.event_generate('<Control-c>')) # Define the command.
+        rClickMenu_entry.add_separator() # Add vertical space between the two labels.
+        rClickMenu_entry.add_command(label="Cut", 
+                                     accelerator="Ctrl+X", # Show the command's shortcut together with the label.
+                                     command=lambda: self.entry.event_generate('<Control-x>')) # Define the command.
+        rClickMenu_entry.add_separator() # Add vertical space between the two labels.
+        rClickMenu_entry.add_command(label="Paste", 
+                                     accelerator="Ctrl+V", # Show the command's shortcut together with the label.
+                                     command=lambda: self.entry.event_generate('<Control-v>')) # Define the command.
+    
+        def show_rClickMenu_entry(event):
+            rClickMenu_entry.tk_popup(event.x_root, event.y_root, 0)
+
+        self.entry.bind("<Button-3>", show_rClickMenu_entry)
+        
+        
+        # Right click menu on the HTML output widget.
+        
+        rClickMenu_HTML = tk.Menu(self.output_html, tearoff=0)
+        rClickMenu_HTML.add_command(label="Copy", 
+                                    accelerator="Ctrl+C", 
+                                    command=lambda: self.output_html.event_generate('<Control-c>'))
+        rClickMenu_HTML.add_separator()
+        rClickMenu_HTML.add_command(label="Cut", 
+                                    accelerator="Ctrl+X", 
+                                    command=lambda: self.output_html.event_generate('<Control-x>'))
+        rClickMenu_HTML.add_separator()
+        rClickMenu_HTML.add_command(label="Paste", 
+                                    accelerator="Ctrl+V", 
+                                    command=lambda: self.output_html.event_generate('<Control-v>'))
+    
+        def show_rClickMenu_HTML(event):
+            rClickMenu_HTML.tk_popup(event.x_root, event.y_root, 0)
+
+        self.output_html.bind("<Button-3>", show_rClickMenu_HTML)
+        
+        
+        # Right click menu on the Github url output widget.
+        
+        rClickMenu_gith = tk.Menu(self.output_gith, tearoff=0)
+        rClickMenu_gith.add_command(label="Copy", 
+                                    accelerator="Ctrl+C", 
+                                    command=lambda: self.output_gith.event_generate('<Control-c>'))
+        rClickMenu_gith.add_separator()
+        rClickMenu_gith.add_command(label="Cut", 
+                                    accelerator="Ctrl+X", 
+                                    command=lambda: self.output_gith.event_generate('<Control-x>'))
+        rClickMenu_gith.add_separator()
+        rClickMenu_gith.add_command(label="Paste", 
+                                    accelerator="Ctrl+V", 
+                                    command=lambda: self.output_gith.event_generate('<Control-v>'))
+    
+        def show_rClickMenu_gith(event):
+            rClickMenu_gith.tk_popup(event.x_root, event.y_root, 0)
+
+        self.output_gith.bind("<Button-3>", show_rClickMenu_gith)
+        
+        
+        return
+        
+        
     def docs_window(self): # new window definition
     
         self.new_window = tk.Toplevel(self.root)
@@ -311,4 +394,3 @@ class Application:
 root = tk.Tk()
 Application(root) 
 root.mainloop()
-    
