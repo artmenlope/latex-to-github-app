@@ -164,8 +164,6 @@ You can try Jupyter in your browser without installing anything at [https://jupy
 
 This small app was developed in Windows 10 using the Spyder IDE. It has also been tested on Ubuntu 20.04 LTS.
 
-To copy and paste in the app you can use the <kbd>ctrl</kbd>+<kbd>c</kbd> and <kbd>ctrl</kbd>+<kbd>v</kbd> shortcuts.
-
 At the current state of development you will need to install the needed packages and run the [latex-to-github-app.py](https://github.com/artmenlope/latex-to-github-app/blob/master/latex-to-github-app.py) script if you want to use the app.
 
 ### To do:
