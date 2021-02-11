@@ -171,7 +171,7 @@ At the current state of development you will need to install the needed packages
 ### To do:
 
 - [ ] Make a reset button.
-- [ ] Make a mouse right click menu for copying and pasting.
+- [x] Make a mouse right click menu for copying and pasting.
 - [x] Test in Ubuntu.
 - [ ] Make an executable file app.
 
