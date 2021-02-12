@@ -219,8 +219,8 @@ class Application:
             
             self.new_width  = max([1.1*self.img_width, self.canvas_width])
             self.new_height = max([1.2*self.img_height, self.canvas_height])
-                        
-            self.output_img.config(scrollregion=(0, 0, self.new_width, self.new_height))
+            
+            self.output_img.config(scrollregion=(0, 0, int(self.new_width)+1, int(self.new_height)+1)) # The numbers for scrollregion must be integers.
             
         return
     
