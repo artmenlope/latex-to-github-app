@@ -11,6 +11,7 @@ import urllib                      # To convert the LaTeX code to HTML
 from PIL import Image, ImageTk
 from io import BytesIO
 from cairosvg import svg2png
+from tkinter import messagebox
 
 
 
@@ -202,7 +203,7 @@ class Application:
             self.output_img.update() # Refresh (optional)
             
         except urllib.error.HTTPError: # Error while rendering the image using Github.
-            tk.messagebox.showerror(title="HTTPError", message="An error occurred while trying to show the image.\n\nPlease, check for typos in your LaTeX code.")
+            messagebox.showerror(title="HTTPError", message="An error occurred while trying to show the image.\n\nPlease, check for typos in your LaTeX code.")
             raise # Show the exception in the terminal too.
             
         return
