@@ -1,3 +1,8 @@
+*News from GitHub's changelog (May 19, 2022):* <br>
+>You can now use LaTeX style syntax to render math expressions within Markdown inline (using `$` delimiters) or in blocks (using `$$` delimiters). 
+
+You can read the official changelog post [here](https://github.blog/changelog/2022-05-19-render-mathematical-expressions-in-markdown/) and read the tutorial [here](https://docs.github.com/es/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions).
+
 # latex-to-github-app
 
 <!--See https://shields.io/ for the badges-->
